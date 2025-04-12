@@ -1,0 +1,175 @@
+<?php 
+/**
+ * File: index.php
+ * Author: Joshua Elijah L. Pura
+ * Date: April 10, 2025
+ * Description: This is the template for the index page
+ * Version: 1.0
+ */
+?>
+
+<?php
+include_once 'includes/header.php';
+?>
+
+<style>
+    :root {
+    --primary-color: #1f7434;
+    --secondary-color: white;
+    }
+
+    main {
+        display: flex;
+        height: 80vh;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    img {
+        width: 40vw;
+        z-index: 1;
+    }
+
+    .hero-caption{
+        padding-right: 12rem;
+        padding-left: 3rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .hero-caption h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+    }
+
+    .hero-caption p {
+        font-weight: 600;  
+        margin-bottom: 2rem;
+    }
+
+    .green-btn {
+        background-color: var(--primary-color);
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-right: 3rem;
+        padding-left: 3rem;
+        color: white;
+        border-radius: 50px;
+        border:none;
+        margin-right: 2rem;
+    }
+
+    .green-btn:active {
+        color: var(--primary-color);
+        background-color: var(--secondary-color);
+        border: var(--primary-color) 3px solid;
+    }
+
+    .white-btn {
+        background-color: white;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        color: var(--primary-color);
+        font-weight: 600;
+        border-radius: 50px;
+        border:2px solid var(--primary-color);
+        margin-right: 2rem;
+    }
+
+    .white-btn:active {
+        color: var(--secondary-color);
+        background-color: var(--primary-color);
+        border: var(--secondary-color) 3px solid;
+    }
+
+    .popout-getstarted{
+        background-color: var(--primary-color);
+        position: absolute;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        border-radius: 20px;
+        left: 45%;
+        top: 30%;
+        box-shadow: 4px 4px 6px 6px rgba(0, 0, 0, 0.2);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+
+    .popout-getstarted button {
+        color: var(--primary-color);
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        border-radius: 50px;
+        border: none;
+        font-weight: 600;
+    }
+
+    .popout-getstarted form {
+        margin-bottom: 1rem;
+    }
+
+    .popout-getstarted form h3 {
+        font-weight: 500;
+        color: white;
+        margin-bottom: 0.5rem;
+    }
+
+    .popout-getstarted form input {
+        padding: 0.4rem;
+        border-radius: 50px;
+        border: none;
+        margin-bottom: 1rem;
+    }
+</style>
+
+<script>
+    function getStarted(){
+        document.getElementById("popout-getstarted").style.setProperty('display','flex')
+
+    }
+</script>
+
+<main>
+   <div class="hero-caption">
+    <h1>Streamline Patient Care with Smart, Secure EHR</h1>
+    <p>Our Electronic Health Record system simplifies clinical workflows, centralizes patient data, and ensures seamless collaboration—so healthcare providers can focus on what matters most: better outcomes.</p>
+        <div class="cta-btn">
+            <button class="green-btn" onclick="getStarted()">Get Started</button>
+            <button class="white-btn">Create Account</button>
+        </div>
+    </div>
+   <div class="hero-img">
+    <img src="./assets/img/hero_img.png" alt="doctor giving vaccine shot">
+    </div>
+</main>
+<div class="popout-getstarted" id="popout-getstarted">
+    <div>
+<!-- User Icon -->
+    </div>
+    <form action="post">
+        <h3>Username</h3>
+        <input type="text" placeholder="john..." name="username" id="username">
+        <h3>Password</h3>
+        <input type="text" name="password" id="password">
+    </form>
+    <button>Login</button>
+</div>
+<div class="popout-create_account">
+
+</div>
+
+
+
+<?php 
+include_once 'includes/footer.php';
+?>

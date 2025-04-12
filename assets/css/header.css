@@ -1,0 +1,46 @@
+:root {
+    --primary-color: #1f7434;
+}
+
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header nav .logo {
+    color: var(--primary-color);
+}
+
+header {
+    height: 6rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    
+}

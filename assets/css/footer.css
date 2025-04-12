@@ -1,0 +1,16 @@
+:root {
+    --primary-color: #1f7434;
+}
+
+.footer-container ul{
+    display: flex;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    justify-content: space-around;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+ul li {
+    list-style: none;
+}
