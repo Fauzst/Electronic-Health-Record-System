@@ -204,7 +204,6 @@ include_once 'includes/header.php';
         <h3>Confirm Password</h3>
         <input type="text" name="password" id="password">
         <input type="text" name="email_confirm" style="display:none">
-
     </form>
     <button >Create Account</button>
 </div>
