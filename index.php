@@ -86,7 +86,8 @@ include_once 'includes/header.php';
     }
 
     .popout-getstarted{
-        background-color: var(--primary-color);
+        background-color: var(--secondary-color);
+        border: var(--primary-color) 3px solid;
         position: absolute;
         padding-left: 3rem;
         padding-right: 3rem;
@@ -94,7 +95,7 @@ include_once 'includes/header.php';
         padding-bottom: 4rem;
         border-radius: 20px;
         left: 45%;
-        top: 30%;
+        top: 20%;
         box-shadow: 4px 4px 6px 6px rgba(0, 0, 0, 0.2);
         display: none;
         justify-content: center;
@@ -104,7 +105,8 @@ include_once 'includes/header.php';
     }
 
     .popout-getstarted button {
-        color: var(--primary-color);
+        color: var(--secondary-color);
+        background-color: var(--primary-color);
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
         padding-left: 1.5rem;
@@ -120,7 +122,7 @@ include_once 'includes/header.php';
 
     .popout-getstarted form h3 {
         font-weight: 500;
-        color: white;
+        color: var(--primary-color);
         margin-bottom: 0.5rem;
     }
 
@@ -129,13 +131,26 @@ include_once 'includes/header.php';
         border-radius: 50px;
         border: none;
         margin-bottom: 1rem;
+        border: var(--primary-color) 2px solid;
     }
 </style>
+<!-- JQuery -->
+<script src="./vendor/node_modules/jquery/dist/jquery.min.js"></script>
 
 <script>
-    function getStarted(){
-        document.getElementById("popout-getstarted").style.setProperty('display','flex')
+    function getStarted() {
+        $('#popout-getstarted').css('display', 'flex');
+        $('#popout-create_account').css('display', 'none');
+    }
 
+    function createAccount() {
+        $('#popout-create_account').css('display', 'flex');
+        $('#popout-getstarted').css('display', 'none');
+    }
+
+    function closeBtn(){
+        $('#popout-getstarted').css('display','none');
+        $('#popout-create_account').css('display', 'none');
     }
 </script>
 
@@ -145,28 +160,55 @@ include_once 'includes/header.php';
     <p>Our Electronic Health Record system simplifies clinical workflows, centralizes patient data, and ensures seamless collaboration—so healthcare providers can focus on what matters most: better outcomes.</p>
         <div class="cta-btn">
             <button class="green-btn" onclick="getStarted()">Get Started</button>
-            <button class="white-btn">Create Account</button>
+            <button class="white-btn" onclick="createAccount()">Create Account</button>
         </div>
     </div>
    <div class="hero-img">
     <img src="./assets/img/hero_img.png" alt="doctor giving vaccine shot">
     </div>
 </main>
+
+<!-- Login Account -->
 <div class="popout-getstarted" id="popout-getstarted">
+    <div class="close-btn" id="close-btn" onclick="closeBtn()">
+        <img src="./assets/img/close-icon.png" onclick="closeBtn()" alt="close" style="height: 2rem; width: 2rem; position: absolute; top: 4%; right: 5%;">
+    </div>
     <div>
 <!-- User Icon -->
+        <img src="./assets/img/user-icon.png" alt="user icon" style="height: 6rem; width: 6rem; margin-bottom: 2rem;">
     </div>
     <form action="post">
         <h3>Username</h3>
         <input type="text" placeholder="john..." name="username" id="username">
         <h3>Password</h3>
         <input type="text" name="password" id="password">
+        <input type="text" name="email_confirm" style="display:none">
     </form>
     <button>Login</button>
 </div>
-<div class="popout-create_account">
 
+<!-- Create Account -->
+<div class="popout-getstarted" id="popout-create_account">
+    <div class="close-btn" id="close-btn" >
+        <img src="./assets/img/close-icon.png" onclick="closeBtn()" alt="close" style="height: 2rem; width: 2rem; position: absolute; top: 4%; right: 5%;">
+    </div>
+    <div>
+<!-- User Icon -->
+        <img src="./assets/img/user-icon.png" alt="user icon" style="height: 6rem; width: 6rem; margin-bottom: 2rem;">
+    </div>
+    <form action="post">
+        <h3>Username</h3>
+        <input type="text" placeholder="john..." name="username" id="username">
+        <h3>Password</h3>
+        <input type="text" name="password" id="password">
+        <h3>Confirm Password</h3>
+        <input type="text" name="password" id="password">
+        <input type="text" name="email_confirm" style="display:none">
+
+    </form>
+    <button >Create Account</button>
 </div>
+
 
 
 
