@@ -84,3 +84,10 @@
     padding-left: 3rem;
     color: var(--secondary-color);
 }
+
+.content {
+    padding: 3rem;
+    grid-column: 3 / 13;
+    grid-row: 2 / 13;
+}
+

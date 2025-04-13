@@ -1,0 +1,79 @@
+:root {
+    --primary-color: #1f7434;
+    --secondary-color: white;
+    --third-color: #ACAB9E;
+    --fourth-color: #315e26;
+    --positive: #007bff;
+    --negative: #dc3545;
+}
+
+
+.patient-list {
+    width: 100%; /* Take full width of the container */
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    font-family: sans-serif;
+    text-align: left;
+    border: 1px solid red;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid var(--fourth-color);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.cell-img img {
+    height: 3rem;
+    width: 3rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+}
+
+.patient-cell {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.edit {
+    background-color: var(--positive);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+}
+
+.delete {
+    background-color: var(--negative);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+}
+
+.edit:active {
+    background-color: #0056b3;
+}
+
+.delete:active {
+    background-color: #c82333;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
