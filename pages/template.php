@@ -11,12 +11,12 @@
     <div class="grid-container">
         <div class="sidebar">
             <?php 
-                include_once '../includes/sidebar.php'
+                include_once __DIR__ . '/../includes/sidebar.php'
             ?>
         </div>
         <div class="topbar">
             <?php 
-                include_once '../includes/topbar.php'
+                include_once __DIR__ . '/../includes/topbar.php'
             ?>
         </div>
         <div class="content"></div>

@@ -1,3 +1,4 @@
+
 <div class="logo-name">HealthSync</div>
 
 <script>
@@ -24,19 +25,19 @@
     <button class="nav-link">Patient Information & Admission</button>
         <ul class="sub-nav">
             <li><a href="">Admission Sheet</a></li>
-            <li><a href="">Patient Profile</a></li>
+            <li><a href="/patient-profile">Patient Profile</a></li>
             <li><a href="">Previous Medical History</a></li>
         </ul>
     <button class="nav-link">Assessment and Monitoring</button>
         <ul class="sub-nav">
             <li><a href="">Physical Assessment</a></li>
-            <li><a href="">Vital Signs</a></li>
-            <li><a href="">Input and Output</a></li>
+            <li><a href="/vital-signs">Vital Signs</a></li>
+            <li><a href="/input-output">Input and Output</a></li>
             <li><a href="">TPR</a></li>
         </ul>
     <button class="nav-link">Laboratory and Diagnostic Tests</button>
         <ul class="sub-nav">
-            <li><a href="">Laboratory</a></li>
+            <li><a href="/laboratory-test">Laboratory</a></li>
             <li><a href="">Chemistry</a></li>
             <li><a href="">Hematology</a></li>
             <li><a href="">Urinalysis</a></li>
