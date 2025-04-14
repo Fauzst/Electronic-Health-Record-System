@@ -32,7 +32,7 @@
         <ul class="sub-nav">
             <li><a href="">Physical Assessment</a></li>
             <li><a href="/vital-signs">Vital Signs</a></li>
-            <li><a href="/input-output">Input and Output</a></li>
+            <li><a href="/intake-output">Intake and Output</a></li>
             <li><a href="">TPR</a></li>
         </ul>
     <button class="nav-link">Laboratory and Diagnostic Tests</button>
@@ -48,12 +48,12 @@
     <button class="nav-link">Medication and Treatment Records</button>
         <ul class="sub-nav">
             <li><a href="">Medication Administration Record</a></li>
-            <li><a href="/doctors-note">Doctor's Note</a></li>
+            
         </ul>
     <button class="nav-link">Progress and Documentation</button>
         <ul class="sub-nav">
-            <li><a href="">Progress Notes</a></li>
-            <li><a href="">FDAR</a></li>
+        <li><a href="/doctors-note">Doctor's Note</a></li>
+            <li><a href="/nurses-note">Nurses' Notes</a></li>
         </ul>
 
 </nav>
