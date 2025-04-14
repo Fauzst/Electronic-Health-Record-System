@@ -22,8 +22,14 @@
         </div>
         <div class="content">
         <div class="actBtn">
-                <button class='save'>Save</button>
-                <button class='edit'>Edit</button>
+                <div class="save">
+                    <img src="/assets/img/save-icon.png" alt="save" >
+                    <p>Save</p>
+                </div>
+                <div class="edit">
+                    <img src="/assets/img/edit-icon.png" alt="edit">
+                    <p>Edit</p>               
+                </div>
             </div>
             <div class="card-container">
                 <div class="card-note">
