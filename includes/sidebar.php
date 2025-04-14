@@ -48,7 +48,7 @@
     <button class="nav-link">Medication and Treatment Records</button>
         <ul class="sub-nav">
             <li><a href="">Medication Administration Record</a></li>
-            <li><a href="">Doctor's Order</a></li>
+            <li><a href="/doctors-note">Doctor's Note</a></li>
         </ul>
     <button class="nav-link">Progress and Documentation</button>
         <ul class="sub-nav">
