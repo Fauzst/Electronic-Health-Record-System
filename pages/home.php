@@ -1,12 +1,3 @@
-<?php 
-/**
- * File: index.php
- * Author: Joshua Elijah L. Pura
- * Date: April 10, 2025
- * Description: This is the template for the index page
- * Version: 1.0
- */
-?>
 
 <?php
 include_once __DIR__ . '/../includes/header.php';
@@ -179,12 +170,12 @@ include_once __DIR__ . '/../includes/header.php';
     </div>
     <form action="post">
         <h3>Username</h3>
-        <input type="text" placeholder="john..." name="username" id="username">
+        <input type="text" placeholder="john..." name="login_username" id="username">
         <h3>Password</h3>
-        <input type="text" name="password" id="password">
+        <input type="text" name="login_password" id="password">
         <input type="text" name="email_confirm" style="display:none">
     </form>
-    <button>Login</button>
+    <button type="submit">Login</button>
 </div>
 
 <!-- Create Account -->
