@@ -1,0 +1,39 @@
+:root {
+    --primary-color: #1f7434;
+    --secondary-color: white;
+    --third-color: #ACAB9E;
+    --fourth-color: #315e26;
+    --fore-bg: #D9D9D9;
+    --positive: #007bff;
+    --negative: #dc3545;
+    --card: #567257;
+}
+
+h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid var(--fourth-color)
+}
+
+.colored-cell {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.assessment-table {
+    height: 100%;
+    overflow-y: scroll;
+}
+

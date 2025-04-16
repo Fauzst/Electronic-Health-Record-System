@@ -1,0 +1,23 @@
+
+:root {
+    --primary-color: #1f7434;
+    --secondary-color: white;
+    --third-color: #ACAB9E;
+    --fourth-color: #315e26;
+    --fore-bg: #D9D9D9;
+    --positive: #007bff;
+    --negative: #dc3545;
+}
+.container {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+h2 {
+    color: var(--primary-color);
+}
+
+.heading {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}

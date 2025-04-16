@@ -80,3 +80,26 @@ table th, table td {
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
+
+.add-io {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 15px;
+    border: 2px solid var(--primary-color);
+    display: none;
+}
+
+.add-io select,input {
+    margin-bottom: 1rem;
+}
+
+.add-io button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: none;
+    border-radius: 10px;
+}

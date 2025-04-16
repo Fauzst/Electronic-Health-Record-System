@@ -87,3 +87,45 @@ table th, table td {
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
 }
+
+.lab-input {
+    background-color: var(--secondary-color);
+    height: 100%;
+    max-height: 500px;
+    padding: 1rem;
+    overflow-y: scroll;
+    border-radius: 15px;
+    width: 600px;
+    border: 3px solid var(--primary-color);
+    position: absolute;
+    left: 40%;
+    display: none;
+}
+
+.lab-input h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.lab-input input {
+    margin-bottom: 0.8rem;
+}
+
+.lab-input button {
+    background-color: var(--primary-color);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: none;
+    color: var(--secondary-color);
+    border-radius: 10px;
+}
+.lab-input::-webkit-scrollbar {
+    display: none;
+}
+
+
+.content {
+    overflow-y: scroll;
+}

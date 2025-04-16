@@ -1,3 +1,12 @@
+<?php 
+
+require_once dirname(__DIR__) . '/core/database.php';
+
+$db = new Database();
+$conn = $db->getConnection();
+
+?>
+
 
 <?php
 include_once __DIR__ . '/../includes/header.php';
@@ -124,6 +133,11 @@ include_once __DIR__ . '/../includes/header.php';
         margin-bottom: 1rem;
         border: var(--primary-color) 2px solid;
     }
+
+    .login-btn {
+        display: flex;
+        justify-content: center;
+    }
 </style>
 <!-- JQuery -->
 <script src="../vendor/node_modules/jquery/dist/jquery.min.js"></script>
@@ -168,14 +182,19 @@ include_once __DIR__ . '/../includes/header.php';
 <!-- User Icon -->
         <img src="../assets/img/user-icon.png" alt="user icon" style="height: 6rem; width: 6rem; margin-bottom: 2rem;">
     </div>
-    <form action="post">
+    <form method="post" action="/login">
         <h3>Username</h3>
         <input type="text" placeholder="john..." name="login_username" id="username">
         <h3>Password</h3>
         <input type="text" name="login_password" id="password">
         <input type="text" name="email_confirm" style="display:none">
+        
+        <div class="login-btn">
+            <button type="submit">Login</button>
+        </div>  
     </form>
-    <button type="submit">Login</button>
+
+    
 </div>
 
 <!-- Create Account -->
