@@ -30,6 +30,7 @@ $result = $stmt->get_result();
     <script src="../vendor/node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
+
     <div class="grid-container">
         <div class="sidebar">
             <?php 
@@ -45,7 +46,7 @@ $result = $stmt->get_result();
             <h4>Enter Medical Condition</h4>
             <form action="medical-history_controller" method="POST">
                 <label for="medical_history">Medical Condition:</label>
-                <input type="text" id="medical_history" name="medical_history" placeholder="Enter your medical history here..."><br><br>
+                <input type="text" id="medical_history" name="medical_history" placeholder="Enter your medical history here..." required><br><br>
 
                 <input type="submit" value="Submit" class="submit">
             </form>

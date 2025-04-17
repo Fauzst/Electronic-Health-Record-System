@@ -24,7 +24,14 @@ $routes = [
     '/pa-table' => 'pages/pa-table.php',
     '/vital-signs_submit' => 'controller/vital-signs_submit.php',
     '/fetch_vital_signs' => 'controller/fetch_vital_signs.php',
-    '/lab-result_write' => 'controller/lab-result_write.php'
+    '/lab-result_write' => 'controller/lab-result_write.php',
+    '/medication-administration' => 'pages/medication-administration.php',
+    '/patient-info' => 'pages/patient-info.php',
+    '/upload' => 'controller/upload.php',
+    '/booking' => 'pages/booking.php',
+    '/appointment' => 'pages/appointment.php',
+    '/account-settings' => 'pages/account-settings.php',
+    '/admin' => 'pages/admin.php'
     
 ];
 

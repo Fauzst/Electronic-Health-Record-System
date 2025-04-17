@@ -51,42 +51,12 @@
     </script>
 
     <nav class="navigation">
-        <button class="nav-link">Patient Information & Admission</button>
+        <button class="nav-link">Patient Action</button>
             <ul class="sub-nav">
-                <li><a href="/admission">Admission Sheet</a></li>
-                <li><a href="/patient-profile">Patient Profile</a></li>
-                <li><a href="/medical-history">Previous Medical History</a></li>
+                <li><a href="/patient-info">Account Settings</a></li>
+                <li><a href="/booking">Book Appointment</a></li>
+                <li><a href="/">Logout</a></li>
             </ul>
-        <button class="nav-link">Assessment and Monitoring</button>
-            <ul class="sub-nav">
-                <li><a href="/physical-assessment">Physical Assessment</a></li>
-                <li><a href="/pa-table">P.A. Summary</a></li>
-                <li><a href="/vital-signs">Vital Signs</a></li>
-                <li><a href="/intake-output">Intake and Output</a></li>
-            </ul>
-        <button class="nav-link">Laboratory and Diagnostic Tests</button>
-            <ul class="sub-nav">
-                <li><a href="/laboratory-test">Laboratory</a></li>
-
-            </ul>
-        <button class="nav-link">Medication and Treatment Records</button>
-            <ul class="sub-nav">
-                <li><a href="/medication-administration">Medication Administration Record</a></li>
-            </ul>
-        <button class="nav-link">Progress and Documentation</button>
-            <ul class="sub-nav">
-                <li><a href="/doctors-note">Doctor's Note</a></li>
-                <li><a href="/nurses-note">Nurses' Notes</a></li>
-            </ul>
-        
-            <button class="nav-link">Appointment and Settings</button>
-            <ul class="sub-nav">
-                <li><a href="/appointment">Appointment</a></li>
-                <li><a href="/account-settings">Account Settings</a></li>
-            </ul>
-        
-        <!-- Back to Patient List Button -->
-        <button class="nav-link" id="back-to-patient-list">Back to Patient List</button>
     </nav>
 
 </body>

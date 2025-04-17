@@ -165,6 +165,16 @@ if ($patientID) {
             <td class="second-main">23:00</td>
         </tr>
         <?php
+        $normalRanges = [
+            'HR' => ['min' => 60, 'max' => 100], // Heart Rate (HR) should be between 60 and 100 bpm
+            'BP_Systolic' => ['min' => 90, 'max' => 120], // BP Systolic should be between 90 and 120 mmHg
+            'BP_Diastolic' => ['min' => 60, 'max' => 80], // BP Diastolic should be between 60 and 80 mmHg
+            'RR' => ['min' => 12, 'max' => 20], // Respiratory Rate (RR) should be between 12 and 20 breaths per minute
+            'O2' => ['min' => 95, 'max' => 100], // O2 Saturation should be between 95% and 100%
+            'Temperature' => ['min' => 36.5, 'max' => 37.5], // Temperature should be between 36.5°C and 37.5°C
+            'Pain' => ['min' => 0, 'max' => 10] // Pain should be between 0 and 10
+        ];
+
         // Use keys that exactly match what you're using in $vitalSignsData
         $fields = [
             'HR' => 'Heart Rate (HR)',
@@ -183,7 +193,20 @@ if ($patientID) {
             echo "<tr><td colspan='2'>{$label}</td>";
             foreach ($timeSlots as $time) {
                 $value = isset($vitalSignsData[$time][$fieldKey]) ? $vitalSignsData[$time][$fieldKey] : '';
-                echo "<td>{$value}</td>";
+        
+                // Apply color if value is outside of normal range, but only if it's not empty
+                $colorClass = '';
+                if ($value !== '' && $value !== null && isset($normalRanges[$fieldKey])) {
+                    $min = $normalRanges[$fieldKey]['min'];
+                    $max = $normalRanges[$fieldKey]['max'];
+        
+                    // Check if the value is outside the normal range
+                    if ($value < $min || $value > $max) {
+                        $colorClass = 'class="out-of-range"';
+                    }
+                }
+        
+                echo "<td {$colorClass}>{$value}</td>";
             }
             echo "</tr>";
         }

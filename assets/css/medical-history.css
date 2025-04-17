@@ -13,24 +13,44 @@ h4 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
-
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 1rem 0;
-    font-size: 1rem;
-    font-family: sans-serif;
+    font-size: 0.95rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-table th, table td {
-    padding: 12px 15px;
-    border: 1px solid var(--fourth-color)
+thead {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+table th,
+table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+tbody tr:hover {
+    background-color: var(--fore-bg);
+    transition: background-color 0.2s ease-in-out;
 }
 
 .colored-cell {
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
+
+table td {
+    vertical-align: middle;
+}
+
 
 .submit {
     background-color: var(--primary-color);

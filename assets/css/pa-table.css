@@ -17,7 +17,57 @@ h2 {
     color: var(--primary-color);
 }
 
-.heading {
-    color: var(--secondary-color);
+:root {
+    --primary-color: #1f7434;
+    --secondary-color: white;
+    --third-color: #ACAB9E;
+    --fourth-color: #315e26;
+    --fore-bg: #D9D9D9;
+    --positive: #007bff;
+    --negative: #dc3545;
+    --card: #567257;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
     background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+table th,
+table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tbody tr:hover {
+    background-color: var(--fore-bg);
+    transition: background-color 0.2s ease-in-out;
+}
+
+table td {
+    vertical-align: middle;
 }

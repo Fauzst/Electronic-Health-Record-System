@@ -15,6 +15,7 @@ $query = "
         pi.patientID,
         pi.first_name, pi.middle_initial, pi.last_name, pi.birthdate, pi.age,
         pi.marital_status, pi.religion, pi.phone, pi.sex,
+        pi.img,
         pc.name AS emergency_name, pc.address AS emergency_address, pc.contact_number AS emergency_contact, pc.relationship AS emergency_relationship,
         pa.foods AS allergy_foods, pa.medicines AS allergy_medicines, pa.scents AS allergy_scents, pa.particles AS allergy_particles, pa.others AS allergy_others,
         par.foods AS reaction_foods, par.medicines AS reaction_medicines, par.scents AS reaction_scents, par.particles AS reaction_particles, par.others AS reaction_others,
@@ -32,6 +33,7 @@ $query = "
     WHERE 
         pi.patientID = ?
 ";
+
 
 $stmt = $conn->prepare($query);
 $stmt->bind_param("i", $patientID);
@@ -81,7 +83,13 @@ $stmt->close();
             <div class="profile-container">
                 <div class="profile-name">
                     <div class="profile-ovw">
-                        <img src="/assets/img/hero_img.png" alt="">
+                    <?php if ($patient['img']) { ?>
+        <img src="<?= htmlspecialchars($patient['img']) ?>" alt="Patient Image">
+    <?php } else { ?>
+        <span>No Image</span>
+    <?php } ?>
+
+
                         <h2><?php echo htmlspecialchars($patient['first_name'] . " " . $patient['middle_initial'] . ". " . $patient['last_name']); ?></h2>
                     </div>
                     <hr>

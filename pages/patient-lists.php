@@ -81,8 +81,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['edit_patientID'])) {
 </head>
 <body>
     <div class="grid-container">
+        <style>
+            .sidebar li {
+                list-style: none;
+                padding-left: 2rem;
+            }
+
+            .sidebar a {
+                color: white;
+                text-decoration: none;
+            }
+        </style>
         <div class="sidebar">
              <div class="logo-name">HealthSync</div>
+             <li><a href="/" style="list-style: none;">Logout</a></li>
         </div>
         <div class="topbar">
             <?php 
